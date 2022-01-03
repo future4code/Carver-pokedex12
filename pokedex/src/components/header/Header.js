@@ -1,21 +1,28 @@
 import * as React from 'react';
 import AppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
-import Toolbar from '@mui/material/Toolbar';
-import Typography from '@mui/material/Typography';
-import IconButton from '@mui/material/IconButton';
+import Button from '@mui/material/Button';
+import Logo from './img/Logo.png'
+
+
+import * as C from './style'
 
 const Header = () => {
   return (
     <Box sx={{ flexGrow: 1 }}>
       <AppBar position="static">
-        <Toolbar variant="dense">
-          <IconButton edge="start" color="inherit" aria-label="menu" sx={{ mr: 2 }}>
-          </IconButton>
-          <Typography variant="h6" color="inherit" component="div">
-            Photos
-          </Typography>
-        </Toolbar>
+        <C.StyledToolbar>
+          <C.MenuContent>
+
+           <C.PokedexIcon>
+           <img src={Logo}/>
+           <Button variant="string" style={{color: '#D72323'}} size='string'>Pokedex</Button>
+           </C.PokedexIcon>
+          </C.MenuContent>
+          <C.Title>
+            <h2>Lista de Pokemons</h2>
+          </C.Title>
+        </C.StyledToolbar>
       </AppBar>
     </Box>
   );
