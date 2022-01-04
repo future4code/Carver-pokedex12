@@ -1,24 +1,30 @@
-import axios from "axios"
 import React, { useContext } from "react"
-import BASE_URL from "../../contants/urls"
 import { GlobalStateContext } from "../../global/GlobalContext"
-import { GlobalState, useGlobalStates, useGlobalSets } from "../../global/GlobalState"
-import { DivCardContainer, DivCard } from './Styled'
+import { DivCardContainer, Img } from './Styled'
+import { useNavigate } from "react-router-dom"
+import Load from '../../components/header/img/Load.gif'
+
+import CardHome from "./CardHome"
 
 const HomePage = () => {
-    const { list } = useContext(GlobalStateContext)
     
-    const listMaped = list.map((poke) => {
+    const navigate = useNavigate()
+
+    function goDetails(id){
+        navigate(`/details/${id}`)
+    }
+
+    const { list } = useContext(GlobalStateContext)
+    console.log('kasd', list)
+    const listMaped = list.results && list.results.map((poke) => {
         return (
-            <DivCard>
-                <h3>{poke.name}</h3>
-                <img src={poke.front_default} />
-            </DivCard>
+           
+            <CardHome name={poke.name} poke={poke}/>
         )
     })
     return (
         <DivCardContainer>
-            {listMaped}
+            {listMaped ? listMaped : <Img src={Load}/>} 
         </DivCardContainer>
     )
 }

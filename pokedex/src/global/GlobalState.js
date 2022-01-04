@@ -3,13 +3,13 @@ import BASE_URL from "../contants/urls";
 import {GlobalStateContext} from "./GlobalContext";
 import axios from "axios";
 import { Router } from "react-router-dom";
-import { useRequestData } from "../hooks/useRequestData";
+import { useRequest } from "../hooks/useRequest";
 
 export const GlobalState = (props) => {
     const [pokedex, setPokedex] = useState([])
     const [listPoke, setListPoke] = useState([])
 
-    const list = useRequestData([], `${BASE_URL}/pokemon`)
+    const list = useRequest( `${BASE_URL}/pokemon?limit=20&offset=0`,[])
     
     const states = {pokedex, listPoke}
     const sets = {setPokedex, setListPoke}
