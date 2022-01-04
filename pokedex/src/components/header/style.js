@@ -24,8 +24,8 @@ img{
 &:hover{
     img{
     background-color: transparent;
-    width: 70px;
-    height: 70px;
+    transform: scale(1.2);
+    transition: .5s ease-in-out;
     cursor: pointer;
     }
 }
