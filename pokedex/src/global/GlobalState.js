@@ -10,26 +10,12 @@ export const GlobalState = (props) => {
     const [listPoke, setListPoke] = useState([])
 
     const list = useRequest( `${BASE_URL}/pokemon?limit=20&offset=0`,[])
+
     
     const states = {pokedex, listPoke}
     const sets = {setPokedex, setListPoke}
 
-    return <GlobalStateContext.Provider value={{ states, sets, list }}>
+    return <GlobalStateContext.Provider value={{ states, sets, list}}>
         {props.children}
     </GlobalStateContext.Provider>
 }
-
-// export const useGlobal = () => {
-//     return useContext(GlobalStateContext)
-//   }
-  
-//   export const useGlobalStates = () => {
-//     const {states} = useGlobal()
-//     return states
-//   }
-  
-//   export const useGlobalSets = () => {
-//     const {sets} = useGlobal()
-//     return sets
-//   }
-  
