@@ -7,6 +7,7 @@ justify-content: space-between;
 
 h1{
     text-align: center;
+    text-transform: uppercase;
 }
 img{
     width: 180px;
@@ -18,24 +19,22 @@ img{
 `
 
 export const Img = styled.div`
-display: flex;
-align-items: center;
-justify-content: center;
-
+    display: flex;
+    align-items: center;
+    justify-content: center;
 `
 
 export const ContainerInfo = styled.div`
-display: flex;
-text-align: center;
-justify-content: space-between;
-margin-top: 5vw;
-margin: 0 100px;
-
+    /* display: flex;
+    text-align: center;
+    justify-content: space-between; */
+    margin-top: 5vw;
+    margin: 0 100px;
 `
 export const Hability = styled.div`
-height: 200px;
-padding: 20px;
-overflow: auto;
+    height: 200px;
+    padding: 20px;
+    overflow: auto;
 
 ::-webkit-scrollbar {
     width: 5px;
@@ -51,14 +50,36 @@ overflow: auto;
     ::-webkit-scrollbar-thumb:hover {
     background: #FE3D31; 
     }
-
 `
 
 export const Stats = styled.div`
-
 
 `
 
 export const Type = styled.div`
 
+`
+
+export const DivStats = styled.div`
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    p{
+        width: 145px;
+        text-transform: uppercase;
+    }
+`
+
+export const DivBarrerStats = styled.div`
+    background-color: #ccc;
+    border-radius: 15px;
+    height: 10px;
+    width: 60%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 20px;
+    div{
+        width: 180%;
+    }
 `

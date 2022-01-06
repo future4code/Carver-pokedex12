@@ -6,12 +6,8 @@ import { DivCardContainer, Img } from './Styled'
 
 
 const PokedexPage = () => {
-
     const { states, sets, list} = useContext(GlobalStateContext)
-    // console.log('b', states, sets)
-    // console.log('c', states.listPoke)
-
-
+ 
     const renderListPokedex = states.pokedex.map((poke, index) => {
         return <CardPokedex key={poke.name} name={poke.name} index={index}/>
     })
