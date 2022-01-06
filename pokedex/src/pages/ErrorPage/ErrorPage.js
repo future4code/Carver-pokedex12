@@ -1,6 +1,6 @@
 import React from "react"
-import Error from '../../components/header/img/Error.gif'
-import BackHome from '../../components/header/img/BackHome.gif'
+import Error from '../../components/img/Error.gif'
+import BackHome from '../../components/img/BackHome.gif'
 import { useNavigate } from "react-router-dom"
 import * as C from './style'
 
