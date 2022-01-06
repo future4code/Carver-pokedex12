@@ -7,7 +7,7 @@ import * as C from './Styled'
 const DetailsPage = () => {
     const params = useParams()
 
-    const pokemon = useRequest(`${BASE_URL}/pokemon/${params.id}`,{})
+    // const pokemon = useRequest(`${BASE_URL}/pokemon/${params.id}`,{})
     // console.log('Poke', pokemon)
     // console.log('params', params)
 
