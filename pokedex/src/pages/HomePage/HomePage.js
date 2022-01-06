@@ -7,19 +7,12 @@ import Load from '../../components/header/img/Load.gif'
 import CardHome from "./CardHome"
 
 const HomePage = () => {
-    
-    const navigate = useNavigate()
 
-    function goDetails(id){
-        navigate(`/details/${id}`)
-    }
-
-    const { list } = useContext(GlobalStateContext)
-    console.log('kasd', list)
-    const listMaped = list.results && list.results.map((poke) => {
+    const { state, sets, list } = useContext(GlobalStateContext)
+    // console.log('kasd', list.results)
+    const listMaped = list.results && list.results.map((poke, index) => {
         return (
-           
-            <CardHome name={poke.name} poke={poke}/>
+            <CardHome key={index} name={poke.name} index={index}/>
         )
     })
     return (

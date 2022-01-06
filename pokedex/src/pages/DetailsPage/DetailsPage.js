@@ -6,6 +6,11 @@ import * as C from './Styled'
 
 const DetailsPage = () => {
     const params = useParams()
+
+    const pokemon = useRequest(`${BASE_URL}/pokemon/${params.id}`,{})
+    // console.log('Poke', pokemon)
+    // console.log('params', params)
+
     const pokemon = useRequest(`${BASE_URL}/pokemon/${params.id}`, {})
     console.log('Poke', pokemon)
 
@@ -29,6 +34,7 @@ const DetailsPage = () => {
         return (
             <div>
                 <p><b>{sta.stat.name}</b>: {sta.base_stat}</p>
+
     
             </div>
         )
