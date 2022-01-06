@@ -40,7 +40,7 @@ const DetailsPage = () => {
 
             <C.Img>
                 <img src={pokemon.sprites && pokemon.sprites.front_default} />
-                <img src={pokemon.sprites && pokemon.sprites.back_default} />
+                <img src={pokemon.sprites && pokemon.sprites.back_default } />
             </C.Img>
             </div>
 
