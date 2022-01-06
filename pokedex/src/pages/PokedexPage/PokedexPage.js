@@ -4,6 +4,7 @@ import { GlobalState } from "../../global/GlobalState"
 import CardPokedex from "./CardPokedex"
 import { DivCardContainer, Img } from './Styled'
 
+
 const PokedexPage = () => {
 
     const { states, sets, list} = useContext(GlobalStateContext)
@@ -16,9 +17,16 @@ const PokedexPage = () => {
     })
  
     return (
+
         <DivCardContainer>
             {states.pokedex == 0 ? <p>Não tem pokemon</p> : renderListPokedex}
         </DivCardContainer>
+
+        <div>
+            <h1>PokedexPage</h1>
+
+        </div>
+
     )
 }
 

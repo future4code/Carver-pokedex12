@@ -1,8 +1,6 @@
-import React, { useEffect, useState, useContext } from "react";
+import React, { useState } from "react";
 import BASE_URL from "../contants/urls";
 import {GlobalStateContext} from "./GlobalContext";
-import axios from "axios";
-import { Router } from "react-router-dom";
 import { useRequest } from "../hooks/useRequest";
 
 export const GlobalState = (props) => {
