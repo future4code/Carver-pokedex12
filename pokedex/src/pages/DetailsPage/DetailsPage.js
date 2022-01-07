@@ -1,16 +1,23 @@
-import React from "react"
+import React, { useState } from "react"
 import { useParams } from "react-router-dom"
 import BASE_URL from "../../contants/urls"
 import { useRequest } from '../../hooks/useRequest'
 import ProgressBar from "./ProgressBar"
+import Button from '@mui/material/Button';
 
 import * as C from './Styled'
 
 const DetailsPage = () => {
     const params = useParams()
+    const [control, setControl] = useState('stats')
+    const [variant1, setVariant1] = useState('contained')
+    const [variant2, setVariant2] = useState('text')
+    const [variant3, setVariant3] = useState('text')
+    const [color1, setColor1] = useState('success')
+    const [color2, setColor2] = useState('success')
+    const [color3, setColor3] = useState('success')
 
     const pokemon = useRequest(`${BASE_URL}/pokemon/${params.id}`, {})
-    // console.log('Poke', pokemon.sprites.other)
 
     const getHability = pokemon.moves && pokemon.moves.map((hab) => {
         return (
@@ -39,6 +46,58 @@ const DetailsPage = () => {
             </C.DivStats>
         )
     })
+
+    const changeStatsText = (text) => {
+        setVariant1('contained')
+        setVariant2('text')
+        setVariant3('text')
+        setControl(text)
+    }
+
+    const changeTypesText = (text) => {
+        setVariant1('text')
+        setVariant2('contained')
+        setVariant3('text')
+        setControl(text)
+    }
+
+    const changeHabilitiesText = (text) => {
+        setVariant1('text')
+        setVariant2('text')
+        setVariant3('contained')
+        setControl(text)
+    }
+
+    const detailRender = () => {
+        if (control === 'stats') {
+            return (
+                <C.ContainerInfo>
+                    <C.Stats>
+                        {getStats}
+                    </C.Stats>
+                </C.ContainerInfo>
+            )
+        } else if (control === 'types') {
+            return (
+                <C.ContainerInfo>
+                    <C.Type>
+                        {getTypes}
+                    </C.Type>
+                </C.ContainerInfo>
+            )
+        } else if (control === 'habilities') {
+            return (
+                <C.ContainerInfo>
+                    <C.Hability>
+                        <div>
+                            {getHability}
+                        </div>
+                    </C.Hability>
+                </C.ContainerInfo>
+            )
+        }
+    }
+
     return (
         <C.Content>
             <div>
@@ -48,28 +107,26 @@ const DetailsPage = () => {
                     {/* <img src={pokemon.sprites && pokemon.sprites.other.official-artwork.front_default} /> */}
                 </C.Img>
             </div>
+            <C.DivInfoText>
+                <div>
+                    <Button 
+                    variant={variant1}
+                    color={color1}
+                    onClick={() => changeStatsText('stats')}>Estatísticas</Button>
 
-            <C.ContainerInfo>
-                <C.Stats>
-                    <h2>Estatísticas</h2>
-                    {getStats}
-                </C.Stats>
-                
-                <C.Type>
-                    <h2>Tipos</h2>
-                    <p>{getTypes}</p>
-                </C.Type>
+                    <Button 
+                    variant={variant2}
+                    color={color2}
+                    onClick={() => changeTypesText('types')}>Tipos</Button>
 
+                    <Button 
+                    variant={variant3}
+                    color={color3}
+                    onClick={() => changeHabilitiesText('habilities')}>Habilidades</Button>
+                </div>
 
-
-                <C.Hability>
-                    <div>
-                    <h2>Habilidades</h2>
-                    {getHability}
-                    </div>
-                </C.Hability>
-            </C.ContainerInfo>
-            {/* <ProgressBar></ProgressBar> */}
+            </C.DivInfoText>
+            {detailRender()}
         </C.Content>
     )
 }

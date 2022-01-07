@@ -4,8 +4,9 @@ import { Button } from "@mui/material"
 export const DivCardContainer = styled.div`
     display: flex;
     flex-wrap: wrap;
-    
-    /* grid-template-columns: 1fr 1fr 1fr; */
+    margin-top: 50px;
+    justify-content: center;
+    align-items: center;
 `
 
 export const DivCard = styled.div`
@@ -13,7 +14,7 @@ export const DivCard = styled.div`
     flex-direction: column;
     align-items: center;
     margin: 20px;
-    padding: 50px;
+    padding: 20px;
     h3{
         display: flex;
         width: 90%;
@@ -49,13 +50,13 @@ export const DivImg = styled.div`
     align-items: center;
     background-color: #d4d4d4;
     width: 100%;
-    height: 200px;
+    height: 270px;
     border-radius: 10px;
 `
 
 export const ButtonCardLeft = styled.button`
     border: none;
-    height: 35px;
+    height: 40px;
     border-radius: 5px;
     font-weight: bold;
     color: #000;
@@ -66,8 +67,6 @@ export const ButtonCardLeft = styled.button`
     font-size: inherit;
     font-family: inherit;
     color: white;
-    /* padding: 0.5em 1em; */
-    /* outline: none; */
     overflow: hidden;
     &::after {
         content: "";
@@ -85,7 +84,7 @@ export const ButtonCardLeft = styled.button`
 `
 export const ButtonCardRight = styled.button`
     border: none;
-    height: 35px;
+    height: 40px;
     border-radius: 5px;
     font-weight: bold;  
     color: #fff;
