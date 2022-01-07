@@ -3,19 +3,20 @@ import { useParams } from "react-router-dom"
 import BASE_URL from "../../contants/urls"
 import { useRequest } from '../../hooks/useRequest'
 import ProgressBar from "./ProgressBar"
+
 import * as C from './Styled'
 
 const DetailsPage = () => {
     const params = useParams()
 
     const pokemon = useRequest(`${BASE_URL}/pokemon/${params.id}`, {})
-    // console.log('Poke', pokemon)
+    // console.log('Poke', pokemon.sprites.other)
 
     const getHability = pokemon.moves && pokemon.moves.map((hab) => {
         return (
-            <div key={hab.move.name}>
+            <C.RenderHability key={hab.move.name}>
                 <p>{hab.move.name}</p>
-            </div>
+            </C.RenderHability>
         )
     })
 
@@ -43,8 +44,8 @@ const DetailsPage = () => {
             <div>
                 <h1>Detalhes do {pokemon.name}</h1>
                 <C.Img>
-                    <img src={pokemon.sprites && pokemon.sprites.front_default} />
-                    <img src={pokemon.sprites && pokemon.sprites.back_default} />
+                    <img src={pokemon.sprites && pokemon.sprites.other.dream_world.front_default} />
+                    {/* <img src={pokemon.sprites && pokemon.sprites.other.official-artwork.front_default} /> */}
                 </C.Img>
             </div>
 
@@ -53,16 +54,19 @@ const DetailsPage = () => {
                     <h2>Estatísticas</h2>
                     {getStats}
                 </C.Stats>
+                
                 <C.Type>
                     <h2>Tipos</h2>
-                    {getTypes}
+                    <p>{getTypes}</p>
                 </C.Type>
 
 
 
                 <C.Hability>
+                    <div>
                     <h2>Habilidades</h2>
                     {getHability}
+                    </div>
                 </C.Hability>
             </C.ContainerInfo>
             {/* <ProgressBar></ProgressBar> */}

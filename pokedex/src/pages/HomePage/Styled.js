@@ -2,10 +2,9 @@ import styled from 'styled-components'
 import { Button } from "@mui/material"
 
 export const DivCardContainer = styled.div`
+    margin-top: 50px;
     display: flex;
     flex-wrap: wrap;
-    
-    /* grid-template-columns: 1fr 1fr 1fr; */
 `
 
 export const DivCard = styled.div`
@@ -32,6 +31,7 @@ export const Buttons = styled.div`
 display: flex;
 align-items: center;
 justify-content: space-between;
+
 
 `
 
@@ -62,7 +62,7 @@ export const ButtonCardLeft = styled.button`
     background-color: #9BCC50;
     margin-right: 8px;
     cursor: pointer;
-    z-index: 1;
+    
     position: relative;
     font-size: inherit;
     font-family: inherit;
@@ -72,7 +72,7 @@ export const ButtonCardLeft = styled.button`
     overflow: hidden;
     &::after {
         content: "";
-        z-index: -1;
+        
         background-color: hsla(0, 0%, 100%, 0.2);
         position: absolute;
         top: -50%;
@@ -93,7 +93,7 @@ export const ButtonCardRight = styled.button`
     color: #fff;
     background-color: #B97FC9;
     cursor: pointer;
-    z-index: 1;
+    
     position: relative;
     font-size: inherit;
     font-family: inherit;
@@ -103,7 +103,7 @@ export const ButtonCardRight = styled.button`
     overflow: hidden;
     &::after {
         content: "";
-        z-index: -1;
+        
         background-color: hsla(0, 0%, 100%, 0.2);
         position: absolute;
         top: -50%;
