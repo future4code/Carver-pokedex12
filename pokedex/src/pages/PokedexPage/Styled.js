@@ -62,7 +62,6 @@ export const ButtonCardLeft = styled.button`
     background-color: #9BCC50;
     margin-right: 8px;
     cursor: pointer;
-    z-index: 1;
     position: relative;
     font-size: inherit;
     font-family: inherit;
@@ -72,7 +71,6 @@ export const ButtonCardLeft = styled.button`
     overflow: hidden;
     &::after {
         content: "";
-        z-index: -1;
         background-color: hsla(0, 0%, 100%, 0.2);
         position: absolute;
         top: -50%;
@@ -93,17 +91,14 @@ export const ButtonCardRight = styled.button`
     color: #fff;
     background-color: #B97FC9;
     cursor: pointer;
-    z-index: 1;
     position: relative;
     font-size: inherit;
     font-family: inherit;
     color: white;
-    /* padding: 0.5em 1em; */
     outline: none;
     overflow: hidden;
     &::after {
         content: "";
-        z-index: -1;
         background-color: hsla(0, 0%, 100%, 0.2);
         position: absolute;
         top: -50%;
@@ -115,4 +110,16 @@ export const ButtonCardRight = styled.button`
         transition: transform 0.45s ease-in-out;
         transform: translate3d(200%, 0, 0) rotate(35deg);
     }
+`
+
+export const PokeDex = styled.div`
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    margin-top: 5vw;
+    color: #557093;
+   
+
 `

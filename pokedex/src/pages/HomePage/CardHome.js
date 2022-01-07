@@ -9,7 +9,7 @@ import BASE_URL from '../../contants/urls'
 
 
 export default function CardHome(props) {
-    const { states, sets, list } = useContext(GlobalStateContext)
+    const { states, sets, list, buttons } = useContext(GlobalStateContext)
 
     const navigate = useNavigate()
 
@@ -24,13 +24,15 @@ export default function CardHome(props) {
 
     const goDetails = (id) => {
         navigate(`/details/${id}`)
+        buttons.setVariant1('text')
+        buttons.setVariant('text')
     }
     const pokemon = useRequest(`${BASE_URL}/pokemon/${props.name}`, {})
 
     return (
         <DivCard>
             <DivImg>
-                <img src={pokemon.sprites && pokemon.sprites.front_default} />
+                <img src={pokemon.sprites && pokemon.sprites.other.dream_world.front_default} />
             </DivImg>
             <h3>{props.name}</h3>
             <Buttons>

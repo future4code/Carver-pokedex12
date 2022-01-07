@@ -7,7 +7,6 @@ import Loading from "../../components/img/Load.gif"
 import CardHome from "./CardHome"
 
 const HomePage = () => {
-
     const { list } = useContext(GlobalStateContext)
     const listMaped = list.results && list.results.map((poke, index) => {
         return (
