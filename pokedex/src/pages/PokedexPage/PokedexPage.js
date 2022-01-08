@@ -8,14 +8,12 @@ import * as C from './Styled'
 
 
 const PokedexPage = () => {
-    const { states, sets, list} = useContext(GlobalStateContext)
- 
+    const { states} = useContext(GlobalStateContext)
     const renderListPokedex = states.pokedex.map((poke, index) => {
         return <CardPokedex key={poke.name} name={poke.name} index={index}/>
     })
  
     return (
-
         <DivCardContainer>
             {states.pokedex == 0 ? <C.PokeDex> <img src={Ash}/>  <h1>Sem Pokemons na Pokedex </h1></C.PokeDex> : renderListPokedex}
         </DivCardContainer>

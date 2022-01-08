@@ -1,8 +1,14 @@
 import styled from 'styled-components'
 import { Button } from "@mui/material"
 
+export const MainContainer = styled.div`
+    margin-top: 80px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+`
+
 export const DivCardContainer = styled.div`
-    margin-top: 50px;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;

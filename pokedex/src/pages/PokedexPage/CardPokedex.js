@@ -9,7 +9,7 @@ import BASE_URL from '../../contants/urls'
 
 
 export default function CardPokedex(props) {
-    const { states, sets, list, buttons } = useContext(GlobalStateContext)
+    const { states, sets, buttons } = useContext(GlobalStateContext)
 
     const navigate = useNavigate()
 
@@ -21,7 +21,7 @@ export default function CardPokedex(props) {
 
     const removeToPokedex = (poke) => {
         const newPoke = { ...poke }
-        list.results = [newPoke, ...list.results]
+        states.listPoke.results = [newPoke, ...states.listPoke.results]
         const newListPokemon = states.pokedex.filter((pokemo) => {
             return pokemo.id !== poke.id;
         })
