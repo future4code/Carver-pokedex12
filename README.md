@@ -6,7 +6,7 @@ Pokedex é uma enciclopédia virtual portátil de Pokemons.
 ## Recursos
 
 - Designer responsivo.
-- Adicionar ou remover da Pokedex
+- Adicionar ou remover Pokémon na Pokedex
 - Ver estatísticas dos Pokemons.
 - Página de erro animada
 - Paginação.
