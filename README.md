@@ -5,7 +5,7 @@ Nome dos integrantes:
 - Pessoa 2
 - Pessoa 3
 
-Link do Surge: http://overwrought-memory.surge.sh/
+Link do Surge: https://condemned-stove.surge.sh/details/gengar
 
 O que funciona:
 - Item 1
