@@ -5,7 +5,7 @@ import Button from '@mui/material/Button';
 import Logo from '../img/Logo.png'
 import LogoPokedex from '../img/LogoPokedex.png'
 import { useNavigate, useParams } from 'react-router-dom';
-import { useState, useContext} from 'react';
+import { useState, useContext } from 'react';
 import { GlobalStateContext } from '../../global/GlobalContext';
 
 import * as C from './style'
@@ -15,7 +15,6 @@ const Header = () => {
   const [logo, setLogo] = useState(Logo)
   const [namePage, setNamePage] = useState('Lista de Pokemons')
   const { buttons } = useContext(GlobalStateContext)
-
 
   function goToHome() {
     navigate('/')
@@ -34,7 +33,6 @@ const Header = () => {
     buttons.setVariant1('text')
     buttons.setColor('success')
   }
-
 
   return (
     <Box >
@@ -66,7 +64,7 @@ const Header = () => {
           </C.Title>
 
           <C.DivEmpt>
-                <p></p>
+            <p></p>
           </C.DivEmpt>
         </C.StyledToolbar>
       </AppBar>

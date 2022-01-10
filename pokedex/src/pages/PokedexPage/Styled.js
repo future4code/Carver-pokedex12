@@ -1,5 +1,4 @@
 import styled from 'styled-components'
-import { Button } from "@mui/material"
 
 export const DivCardContainer = styled.div`
     display: flex;
@@ -30,18 +29,17 @@ export const DivCard = styled.div`
     }
 `
 export const Buttons = styled.div`
-display: flex;
-align-items: center;
-justify-content: space-between;
-
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 `
 
 export const Img = styled.img`
-display: flex;
-align-items: center;
-justify-content: center;
-margin: auto;
-margin-top: 15vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+    margin-top: 15vw;
 `
 
 export const DivImg = styled.div`
@@ -119,6 +117,4 @@ export const PokeDex = styled.div`
     width: 100%;
     margin-top: 5vw;
     color: #557093;
-   
-
 `

@@ -11,7 +11,7 @@ const ProgressBar = (props) => {
                     color: '#fbc630',
                     trailColor: '#ccc'
                 },
-                
+
             }} />
         </div>
     )

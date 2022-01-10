@@ -3,13 +3,10 @@ import { useRequest } from '../../hooks/useRequest'
 import { useNavigate } from 'react-router-dom'
 import { GlobalStateContext } from '../../global/GlobalContext'
 import { DivCard, Buttons, ButtonCardLeft, ButtonCardRight, DivImg } from './Styled'
-// import { Button } from "@mui/material"
-import Load from '../../components/img/Load.gif'
 import BASE_URL from '../../contants/urls'
 
-
 export default function CardHome(props) {
-    const { states, sets, list, buttons } = useContext(GlobalStateContext)
+    const { states, sets, buttons } = useContext(GlobalStateContext)
 
     const navigate = useNavigate()
 
@@ -18,7 +15,7 @@ export default function CardHome(props) {
         const newPokedex = [...states.pokedex, newPoke]
         sets.setPokedex(newPokedex)
         if (pokemon === poke) {
-            list.results.splice(index, 1)
+            states.listPoke.results.splice(index, 1)
         }
     }
 

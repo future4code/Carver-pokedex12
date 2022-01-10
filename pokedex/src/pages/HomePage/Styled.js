@@ -1,8 +1,13 @@
 import styled from 'styled-components'
-import { Button } from "@mui/material"
+
+export const MainContainer = styled.div`
+    margin-top: 80px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+`
 
 export const DivCardContainer = styled.div`
-    margin-top: 50px;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -30,19 +35,17 @@ export const DivCard = styled.div`
     }
 `
 export const Buttons = styled.div`
-display: flex;
-align-items: center;
-justify-content: space-between;
-
-
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 `
 
 export const Img = styled.img`
-display: flex;
-align-items: center;
-justify-content: center;
-margin: auto;
-margin-top: 15vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+    margin-top: 15vw;
 `
 
 export const DivImg = styled.div`
@@ -69,8 +72,6 @@ export const ButtonCardLeft = styled.button`
     font-size: inherit;
     font-family: inherit;
     color: white;
-    /* padding: 0.5em 1em; */
-    /* outline: none; */
     overflow: hidden;
     &::after {
         content: "";

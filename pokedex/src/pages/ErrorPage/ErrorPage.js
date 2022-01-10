@@ -7,19 +7,19 @@ import * as C from './style'
 const ErrorPage = () => {
     const navigate = useNavigate()
 
-    function goHome(){
+    function goHome() {
         navigate('/')
     }
     return (
         <C.DivContent>
             <div>
-                 <h1>Pagina não encontrada</h1>
-                 <h1>404!</h1>
-                 <C.ImgBackHome src={BackHome} onClick={goHome}/>
-                 <h3>Clique no Squirtle para voltar</h3>
+                <h1>Pagina não encontrada</h1>
+                <h1>404!</h1>
+                <C.ImgBackHome src={BackHome} onClick={goHome} />
+                <h3>Clique no Squirtle para voltar</h3>
             </div>
-           
-            <C.ImgPika src={Error}/>
+
+            <C.ImgPika src={Error} />
         </C.DivContent>
     )
 }
