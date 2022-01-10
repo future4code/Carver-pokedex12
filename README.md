@@ -18,7 +18,7 @@ A ideia é que usemos a [Poke Api](https://pokeapi.co/) como fonte de dados para
 
 ## Deploy da Aplicação com Surge: 
 
-	 <https://condemned-stove.surge.sh/>
+<https://condemned-stove.surge.sh/>
 
 ## Tecnologias utilizadas
 
