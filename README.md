@@ -5,7 +5,7 @@ Nome dos integrantes:
 - Pessoa 2
 - Pessoa 3
 
-Link do Surge: https://condemned-stove.surge.sh/details/gengar
+Link do Surge: https://condemned-stove.surge.sh/
 
 O que funciona:
 - Item 1
