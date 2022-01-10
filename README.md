@@ -26,4 +26,3 @@ A ideia é que usemos a [Poke Api](https://pokeapi.co/) como fonte de dados para
 -   Axios
 -   Styled components
 -  Material ui
-
