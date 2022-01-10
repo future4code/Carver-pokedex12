@@ -1,8 +1,7 @@
 import styled from 'styled-components'
 import Toolbar from '@mui/material/Toolbar'
 
-
-export  const StyledToolbar = styled(Toolbar)`
+export const StyledToolbar = styled(Toolbar)`
     background-color: #30A7D7;
     color: #F5EDED;
     display: flex;
@@ -12,43 +11,37 @@ export  const StyledToolbar = styled(Toolbar)`
     z-index: 1;
     
 `
+
 export const MenuContent = styled.div`
-background-color: #30A7D7;
-display: flex;
-align-items: center;
-width: 100vw;
+    background-color: #30A7D7;
+    display: flex;
+    align-items: center;
+    width: 100vw;
 `
+
 export const PokedexIcon = styled.div`
-display: flex;
-align-items: center;
-justify-content: center;
-background-color: #30A7D7;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #30A7D7;
 
-img{
-    background-color: transparent;
-    width: 60px;
-    height: 60px;
-    margin-right: 15px;
-}
-/* &:hover{
     img{
-    background-color: transparent;
-    transform: scale(1.2);
-    transition: .5s ease-in-out;
-    cursor: pointer;
-    }
-} */
-
-`
-export const Title = styled.div`
-display: flex;
-align-items: center;
-width: 100vw;
-position: relative;
-
-&:hover{
-    color: #FE3D31;
+        background-color: transparent;
+        width: 60px;
+        height: 60px;
+        margin-right: 15px;
 }
+`
+
+export const Title = styled.div`
+    display: flex;
+    align-items: center;
+    width: 100vw;
+    position: relative;
+
+    &:hover{
+        color: #FE3D31;
+    }
 `
 
 export const DivEmpt = styled.div`

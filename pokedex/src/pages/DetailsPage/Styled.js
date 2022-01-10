@@ -1,9 +1,9 @@
 import styled from 'styled-components'
 
 export const Content = styled.div`
-display: flex;
-flex-direction: column;
-justify-content: space-between;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 h1{
     margin-top: 100px;
     text-align: center;
@@ -30,6 +30,10 @@ export const DivInfoText = styled.div`
         flex-direction: row;
         justify-content: space-between;
         margin-bottom: 20px;
+        @media screen and (max-device-width : 480px) {
+            width: 100%;
+    }
+
     }
     h2{
         cursor: pointer;
@@ -48,6 +52,9 @@ export const ContainerInfo = styled.div`
     justify-content: space-between;
     margin-top: 5vw;
     margin: 0 100px;
+    @media screen and (max-device-width : 480px) {
+            margin: auto;
+    }
 `
 export const Hability = styled.div`
     display: flex;
@@ -60,6 +67,10 @@ export const Hability = styled.div`
     background-color: #9BCC50;
     box-shadow: 1px 1px 10px 1px #000;
     border-radius: 10px;
+    @media screen and (max-device-width : 480px) {
+            width: 100vw;
+            margin: auto;
+    }
     div{
         overflow: auto;
         ::-webkit-scrollbar {
@@ -76,6 +87,9 @@ export const Hability = styled.div`
         ::-webkit-scrollbar-thumb:hover {
         background: #FBCC45; 
         }
+        @media screen and (max-device-width : 480px) {
+            width: 100vw;
+    }
     }
 `
 
@@ -86,6 +100,9 @@ export const Stats = styled.div`
     background-color: #9BCC50;
     box-shadow: 1px 1px 10px 1px #000;
     border-radius: 10px;
+    @media screen and (max-device-width : 480px) {
+            width: 100vw;
+    }
 `
 
 export const Type = styled.div`
@@ -99,6 +116,9 @@ export const Type = styled.div`
     background-color: #9BCC50;
     box-shadow: 1px 1px 10px 1px #000;
     border-radius: 10px;
+    @media screen and (max-device-width : 480px) {
+            width: 100vw;
+    }
     p{
         text-transform: uppercase;
         font-weight: 500;
@@ -130,7 +150,7 @@ export const DivBarrerStats = styled.div`
     justify-content: center;
     margin-right: 20px;
     div{
-        width: 160%;
+        width: 150%;
     }
 `
 
@@ -138,7 +158,8 @@ export const RenderHability = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 30%;
+    width: 47%;
+    max-width: 200px;
     margin: auto;
     :hover{
             background-color: #FBCC45;

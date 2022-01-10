@@ -104,25 +104,24 @@ const DetailsPage = () => {
                 <h1>Detalhes do {pokemon.name}</h1>
                 <C.Img>
                     <img src={pokemon.sprites && pokemon.sprites.other.dream_world.front_default} />
-                    {/* <img src={pokemon.sprites && pokemon.sprites.other.official-artwork.front_default} /> */}
                 </C.Img>
             </div>
             <C.DivInfoText>
                 <div>
-                    <Button 
-                    variant={variant1}
-                    color={color1}
-                    onClick={() => changeStatsText('stats')}>Estatísticas</Button>
+                    <Button
+                        variant={variant1}
+                        color={color1}
+                        onClick={() => changeStatsText('stats')}>Estatísticas</Button>
 
-                    <Button 
-                    variant={variant2}
-                    color={color2}
-                    onClick={() => changeTypesText('types')}>Tipos</Button>
+                    <Button
+                        variant={variant2}
+                        color={color2}
+                        onClick={() => changeTypesText('types')}>Tipos</Button>
 
-                    <Button 
-                    variant={variant3}
-                    color={color3}
-                    onClick={() => changeHabilitiesText('habilities')}>Habilidades</Button>
+                    <Button
+                        variant={variant3}
+                        color={color3}
+                        onClick={() => changeHabilitiesText('habilities')}>Habilidades</Button>
                 </div>
 
             </C.DivInfoText>

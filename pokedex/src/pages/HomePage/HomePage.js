@@ -1,7 +1,6 @@
 import React, { useContext } from "react"
 import { GlobalStateContext } from "../../global/GlobalContext"
 import { MainContainer, DivCardContainer, Img } from './Styled'
-import { useNavigate } from "react-router-dom"
 import Loading from "../../components/img/Load.gif"
 import Pagination from '@mui/material/Pagination';
 
@@ -21,10 +20,10 @@ const HomePage = () => {
     })
     return (
         <MainContainer>
-            <Pagination count={32} shape="rounded" page={states.pagination} onChange={onChangePagination}/>
-        <DivCardContainer>
-            {listMaped ? listMaped : <Img src={Loading}/>} 
-        </DivCardContainer>
+            <Pagination count={32} shape="rounded" page={states.pagination} onChange={onChangePagination} />
+            <DivCardContainer>
+                {listMaped ? listMaped : <Img src={Loading} />}
+            </DivCardContainer>
         </MainContainer>
     )
 }
